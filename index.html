@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Local Search Optimization (Hindi & English Keywords) -->
+  <title>अध्याय ०४: मशीन लर्निंग एवं तंत्रिका तंत्र के मूल सिद्धांत | शिक्षा सेतु डिजिटल शिक्षण मंच</title>
+  <meta name="description" content="कंप्यूटर विज्ञान एवं कृत्रिम बुद्धिमत्ता (AI) के विद्यार्थियों के लिए मशीन अधिगम, न्यूरल नेटवर्क, और एल्गोरिदम पर आधारित औपचारिक एवं मानक हिंदी शिक्षण सामग्री।">
+  <meta name="keywords" content="मशीन लर्निंग हिंदी में, कृत्रिम बुद्धिमत्ता नोट्स, न्यूरल नेटवर्क ट्यूटोरियल, machine learning notes in hindi, formal hindi education, computer science hindi">
+  <meta name="author" content="Shiksha Setu Academic Editorial">
+
+  <!-- Typography: Noto Sans Devanagari & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Portal Stylesheet -->
+  <link rel="stylesheet" href="styles/portal.css">
+</head>
+<body class="glossary-highlight-active">
+
+  <!-- 1. Top Banner Addressing the Client's Freelancer Brief -->
+  <div class="proposal-client-banner">
+    <div>
+      <span class="badge">SAMPLE DEMO</span>
+      <strong>परियोजना प्रदर्शन:</strong> औपचारिक हिंदी वेब अनुवाद (Formal English ➔ Hindi Web Translation & HTML Tag Integrity)
+    </div>
+    <div style="font-size: 0.8rem; opacity: 0.85;">
+      पटना, बिहार (BR 800001) क्लाइंट परियोजना हेतु विशेष रूप से तैयार
+    </div>
+  </div>
+
+  <!-- 2. Main Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-wrap">
+        <div class="brand-icon">श्रो</div>
+        <div class="brand-text">
+          <h1>शिक्षा सेतु • SHIKSHA SETU</h1>
+          <span>राष्ट्रीय डिजिटल उच्च शिक्षा एवं अनुवाद पोर्टल | E-Learning Repository</span>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button id="theme-toggle" class="mode-btn" style="border: 1px solid var(--border-color); padding: 0.35rem 0.75rem;" title="थीम बदलें">
+          🌓 थीम (Theme)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Reviewer Control Toolbar (Client Verification Bar) -->
+  <div class="toolbar-wrap">
+    <div class="toolbar-inner">
+      
+      <!-- View Mode Group: Hindi / English / Side-by-Side Split -->
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <span style="font-weight: 700; color: var(--text-muted); text-transform: uppercase; font-size: 0.75rem;">समीक्षा दृश्य (View):</span>
+        <div class="view-mode-group">
+          <button class="mode-btn" data-mode="hindi">हिंदी संस्करण (Formal Hindi)</button>
+          <button class="mode-btn active" data-mode="split">द्विभाषी दृश्य (Split Compare)</button>
+          <button class="mode-btn" data-mode="english">Original English</button>
+        </div>
+      </div>
+
+      <!-- Tools: Glossary Highlight & Accessibility Font Sizing -->
+      <div class="toolbar-tools">
+        <!-- Glossary Highlight Switch -->
+        <label class="toggle-switch-wrap" title="पारिभाषिक शब्दावली को हाइलाइट करें">
+          <input type="checkbox" id="glossary-toggle" class="switch-input" checked>
+          <div class="switch-slider"></div>
+          <span>शब्दावली हाइलाइट (Glossary Highlight)</span>
+        </label>
+
+        <!-- Font Size Adjuster -->
+        <div style="display: flex; align-items: center; gap: 0.25rem;">
+          <button id="font-dec" class="mode-btn" style="padding: 0.2rem 0.5rem; border: 1px solid var(--border-color);">A-</button>
+          <button id="font-inc" class="mode-btn" style="padding: 0.2rem 0.5rem; border: 1px solid var(--border-color);">A+</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. Main Educational Content Wrapper -->
+  <main class="main-wrapper">
+
+    <div class="bilingual-split-container split-mode" id="bilingual-container">
+
+      <!-- ==================================================================
+           LEFT PANEL: Formal Academic Hindi (शुद्ध एवं मानक हिंदी)
+           ================================================================== -->
+      <article class="article-panel" id="panel-hindi">
+        <div class="panel-header-badge badge-hindi">
+          <span>🇮🇳 मानक एवं औपचारिक हिंदी अनुवाद (Formal Hindi)</span>
+        </div>
+
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          पाठ्यक्रम <span>›</span> कंप्यूटर विज्ञान <span>›</span> <span class="glossary-term" data-en="Artificial Intelligence">कृत्रिम बुद्धिमत्ता</span> <span>›</span> अध्याय ०४
+        </nav>
+
+        <h1 class="article-title">मशीन अधिगम एवं तंत्रिका तंत्र के आधारभूत सिद्धांत</h1>
+        <p class="article-subtitle">
+          आधुनिक संगणन, सांख्यिकीय मॉडलिंग, और स्वायत्त प्रणालियों में प्रयुक्त होने वाली मूलभूत अवधारणाओं का व्यापक शैक्षणिक विश्लेषण।
+        </p>
+
+        <div class="meta-row">
+          <div class="meta-item">
+            <strong>प्रकाशन:</strong> शैक्षणिक सत्र २०२६–२७
+          </div>
+          <div class="meta-item">
+            <strong>अनुमानित पठन समय:</strong> १२ मिनट
+          </div>
+          <div class="meta-item">
+            <strong>स्तर:</strong> स्नातक / स्नातकोत्तर
+          </div>
+        </div>
+
+        <div class="content-body">
+          <p>
+            समकालीन युग में <span class="glossary-term" data-en="Machine Learning">मशीन अधिगम</span> (Machine Learning) संगणक विज्ञान की एक क्रांतिकारी विधा के रूप में उभरा है। पारंपरिक प्रोग्रामिंग पद्धतियों के विपरीत—जहाँ प्रत्येक निर्देश को स्पष्ट रूप से संहिताबद्ध (hard-coded) किया जाता है—<span class="glossary-term" data-en="Artificial Intelligence">कृत्रिम बुद्धिमत्ता</span> आधारित प्रणालियाँ उपलब्ध <span class="glossary-term" data-en="Dataset">डेटासेट</span> के आधार पर स्वयं निष्कर्ष निकालना और भविष्यवाणियाँ करना सीखती हैं।
+          </p>
+
+          <div class="callout-box note">
+            <div class="callout-title">
+              <span>📌 महत्वपूर्ण शैक्षणिक बिंदु:</span>
+            </div>
+            <p style="margin-bottom: 0;">
+              एक प्रभावी <span class="glossary-term" data-en="Algorithm">कलन विधि</span> (एल्गोरिदम) की सक्षमता केवल इस बात पर निर्भर नहीं करती कि वह पूर्व-उपलब्ध आँकड़ों पर कैसा प्रदर्शन करती है, बल्कि यह इस पर भी निर्भर करती है कि वह अप्रत्याशित तथा नवीन सूचनाओं के प्रति कितनी सामान्यीकरण क्षमता (Generalization Capability) प्रदर्शित करती है।
+            </p>
+          </div>
+
+          <h2>१. प्रमुख अधिगम पद्धतियों का वर्गीकरण</h2>
+          <p>
+            व्यावहारिक अनुप्रयोग के संदर्भ में, मशीन अधिगम की विधियों को मुख्य रूप से तीन मुख्य श्रेणियों में विभाजित किया गया है:
+          </p>
+
+          <ol>
+            <li>
+              <strong><span class="glossary-term" data-en="Supervised Learning">पर्यवेक्षित अधिगम</span> (Supervised Learning):</strong> 
+              इस पद्धति में मॉडल को एक ऐसे <span class="glossary-term" data-en="Training Data">प्रशिक्षण डेटा</span> के माध्यम से प्रशिक्षित किया जाता है, जिसमें प्रत्येक इनपुट के साथ उसका प्रामाणिक लेबल (Ground Truth) संलग्न होता है। इसका प्राथमिक लक्ष्य इनपुट <span class="glossary-term" data-en="Feature">अभिलक्षणों</span> (Features) तथा अभीष्ट आउटपुट के मध्य एक सुदृढ़ गणितीय प्रतिचित्रण (Mapping) स्थापित करना है।
+            </li>
+            <li>
+              <strong><span class="glossary-term" data-en="Unsupervised Learning">अपर्यवेक्षित अधिगम</span> (Unsupervised Learning):</strong> 
+              यहाँ मॉडल को अचिह्नित (Unlabeled) आँकड़े प्रदान किए जाते हैं। प्रणाली बिना किसी पूर्व निर्देश के डेटा के आंतरिक अंतर्निहित स्वरूप, संकुलन (Clustering), तथा सह-संबंधों का अनावरण करती है।
+            </li>
+            <li>
+              <strong>पुनर्बलन अधिगम (Reinforcement Learning):</strong> 
+              यह उपागम पुरस्कार और दंड (Reward & Penalty) के सिद्धांत पर कार्य करता है, जहाँ एक स्वचालित कारक (Agent) गतिशील वातावरण में इष्टतम निर्णय लेना सीखता है।
+            </li>
+          </ol>
+
+          <h2>२. कृत्रिम तंत्रिका तंत्र की आंतरिक कार्यप्रणाली</h2>
+          <p>
+            <span class="glossary-term" data-en="Neural Networks">कृत्रिम तंत्रिका तंत्र</span> (Artificial Neural Networks) मानव मस्तिष्क के जैविक न्यूरॉन्स की जटिल संरचना से प्रेरित हैं। इनमें परस्पर जुड़े हुए नोड्स (Nodes) की परतें समाहित होती हैं:
+          </p>
+
+          <ul>
+            <li><strong>इनपुट परत (Input Layer):</strong> बाह्य पर्यावरण से प्रारंभिक कच्चे आँकड़ों को स्वीकार करती है।</li>
+            <li><strong>गुप्त परतें (Hidden Layers):</strong> गैर-रैखिक सक्रियण फलनों (Activation Functions) के माध्यम से अमूर्त विशेषताओं का निष्कर्षण करती हैं।</li>
+            <li><strong>आउटपुट परत (Output Layer):</strong> अंतिम वर्गीकरण अथवा संख्यात्मक भविष्यवाणी प्रस्तुत करती है।</li>
+          </ul>
+
+          <!-- Technical Code Block (HTML Tag Preservation) -->
+          <h3>कोड कार्यान्वयन उदाहरण (Python & Scikit-Learn)</h3>
+          <p>
+            नीचे दिए गए प्रोग्राम कोड में न्यूनतम पंक्तियों में एक बुनियादी क्लासिफायर के प्रशिक्षण का औपचारिक प्रदर्शन किया गया है:
+          </p>
+
+          <div class="code-block">
+            <div class="code-header">Python ३.११ • प्रतिदर्श कार्यान्वयन</div>
+            <pre><code># पुस्तकालयों का आयात (Importing Core Modules)
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import accuracy_score
+
+# मॉडल का इनिशियलाइज़ेशन
+classifier = MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=500, random_state=42)
+
+# प्रशिक्षण डेटा पर मॉडल को फिट करना
+classifier.fit(X_train, y_train)
+
+# परीक्षण डेटासेट पर भविष्यवाणियाँ
+y_pred = classifier.predict(X_test)
+print(f"अंतिम सटीकता दर (Accuracy): {accuracy_score(y_test, y_pred) * 100:.2f}%")</code></pre>
+          </div>
+
+          <h2>३. तुलनात्मक विश्लेषण तालिका (Comparative Matrix)</h2>
+          <p>
+            दोनों प्रणालियों के मूलभूत अंतरों को समझने हेतु निम्नलिखित तालिका का अवलोकन करें:
+          </p>
+
+          <!-- Technical HTML Table -->
+          <div class="edu-table-wrap">
+            <table class="edu-table">
+              <thead>
+                <tr>
+                  <th>मापदंड (Metric)</th>
+                  <th>पर्यवेक्षित अधिगम (Supervised)</th>
+                  <th>अपर्यवेक्षित अधिगम (Unsupervised)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>डेटा आवश्यकता</strong></td>
+                  <td>सुस्पष्ट रूप से लेबल किया गया डेटा</td>
+                  <td>बिना लेबल वाला (कच्चा) डेटा</td>
+                </tr>
+                <tr>
+                  <td><strong>अनुकूलन उद्देश्य</strong></td>
+                  <td><span class="glossary-term" data-en="Loss Function">हानि फलन</span> का न्यूनतमकरण</td>
+                  <td>डेटा के अंतर्निहित पैटर्न की खोज</td>
+                </tr>
+                <tr>
+                  <td><strong>प्रमुख एल्गोरिदम</strong></td>
+                  <td>रैखिक प्रतिगमन, रैंडम फॉरेस्ट</td>
+                  <td>K-मीन्स क्लस्टरिंग, PCA</td>
+                </tr>
+                <tr>
+                  <td><strong>जटिलता एवं समय</strong></td>
+                  <td>उच्च संगणकीय लागत</td>
+                  <td>मध्यम से परिवर्तनीय</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout-box">
+            <div class="callout-title">
+              <span>⚠️ सावधानियां एवं व्यावहारिक सीमाएं:</span>
+            </div>
+            <p style="margin-bottom: 0;">
+              अत्यधिक जटिल तंत्रिका तंत्रों में <span class="glossary-term" data-en="Overfitting">अति-सन्निकटन</span> (Overfitting) का गंभीर जोखिम बना रहता है। इससे बचने हेतु नियमितीकरण (Regularization) तकनीकों तथा <span class="glossary-term" data-en="Hyperparameters">अति-प्राचलों</span> (Hyperparameters) के समुचित समस्वरण (Tuning) की अनुशंसा की जाती है।
+            </p>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ==================================================================
+           RIGHT PANEL: Original Academic English Source
+           ================================================================== -->
+      <article class="article-panel" id="panel-english">
+        <div class="panel-header-badge badge-english">
+          <span>🇬🇧 Original English Educational Source</span>
+        </div>
+
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          Curriculum <span>›</span> Computer Science <span>›</span> Artificial Intelligence <span>›</span> Chapter 04
+        </nav>
+
+        <h1 class="article-title">Foundations of Machine Learning and Neural Networks</h1>
+        <p class="article-subtitle">
+          A comprehensive academic analysis of foundational concepts utilized in modern computation, statistical modeling, and autonomous intelligent systems.
+        </p>
+
+        <div class="meta-row">
+          <div class="meta-item">
+            <strong>Publication:</strong> Academic Session 2026–27
+          </div>
+          <div class="meta-item">
+            <strong>Estimated Reading:</strong> 12 Minutes
+          </div>
+          <div class="meta-item">
+            <strong>Level:</strong> Undergraduate / Graduate
+          </div>
+        </div>
+
+        <div class="content-body">
+          <p>
+            In the contemporary era, Machine Learning has emerged as a revolutionary paradigm within computer science. Unlike traditional programming paradigms where every operational instruction is explicitly hard-coded, artificial intelligence systems learn from comprehensive datasets to infer patterns and generate predictive forecasts autonomously.
+          </p>
+
+          <div class="callout-box note">
+            <div class="callout-title">
+              <span>📌 Key Academic Insight:</span>
+            </div>
+            <p style="margin-bottom: 0;">
+              The efficacy of an algorithmic architecture is not merely determined by its empirical performance on pre-existing training sets, but predominantly by its generalization capability when confronted with novel, unobserved information.
+            </p>
+          </div>
+
+          <h2>1. Classification of Core Learning Paradigms</h2>
+          <p>
+            From an operational and implementation standpoint, machine learning methodologies are broadly categorized into three principal classifications:
+          </p>
+
+          <ol>
+            <li>
+              <strong>Supervised Learning:</strong> 
+              In this methodology, models are trained utilizing ground-truth labeled datasets. The primary operational objective is to derive a robust mathematical mapping between multidimensional input features and the corresponding target output.
+            </li>
+            <li>
+              <strong>Unsupervised Learning:</strong> 
+              Here, algorithms process entirely unlabeled data. The underlying architecture systematically uncovers latent clusters, dimensional distributions, and statistical associations without antecedent supervision.
+            </li>
+            <li>
+              <strong>Reinforcement Learning:</strong> 
+              This framework operates on cumulative reward and penalty vectors, wherein an autonomous agent iteratively identifies optimal behavioral policies in a dynamic environment.
+            </li>
+          </ol>
+
+          <h2>2. Internal Architecture of Artificial Neural Networks</h2>
+          <p>
+            Artificial Neural Networks (ANNs) are conceptually inspired by biological neuronal networks in the human cerebral cortex. They comprise interconnected hierarchical layers of computational nodes:
+          </p>
+
+          <ul>
+            <li><strong>Input Layer:</strong> Ingests external raw numerical or categorical vectors.</li>
+            <li><strong>Hidden Layers:</strong> Execute non-linear feature extractions via customized activation functions.</li>
+            <li><strong>Output Layer:</strong> Synthesizes final categorical probability distributions or scalar regression values.</li>
+          </ul>
+
+          <!-- Technical Code Block (Matching Tag Structure) -->
+          <h3>Code Implementation Example (Python & Scikit-Learn)</h3>
+          <p>
+            The Python code snippet below demonstrates the canonical training workflow of a multi-layer perceptron classifier:
+          </p>
+
+          <div class="code-block">
+            <div class="code-header">Python 3.11 • Implementation Specimen</div>
+            <pre><code># Module Imports
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import accuracy_score
+
+# Model Initialization
+classifier = MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=500, random_state=42)
+
+# Fitting Model on Training Vectors
+classifier.fit(X_train, y_train)
+
+# Generating Predictions on Hold-out Validation Set
+y_pred = classifier.predict(X_test)
+print(f"Final Validation Accuracy: {accuracy_score(y_test, y_pred) * 100:.2f}%")</code></pre>
+          </div>
+
+          <h2>3. Comparative Matrix: Supervised vs Unsupervised</h2>
+          <p>
+            Examine the comparative matrix below to discern the operational boundaries between both methodologies:
+          </p>
+
+          <!-- Technical HTML Table -->
+          <div class="edu-table-wrap">
+            <table class="edu-table">
+              <thead>
+                <tr>
+                  <th>Evaluation Metric</th>
+                  <th>Supervised Learning</th>
+                  <th>Unsupervised Learning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Data Prerequisite</strong></td>
+                  <td>Strictly labeled ground-truth vectors</td>
+                  <td>Unlabeled, raw feature distributions</td>
+                </tr>
+                <tr>
+                  <td><strong>Optimization Objective</strong></td>
+                  <td>Minimization of Loss Function</td>
+                  <td>Discovery of latent structures & clusters</td>
+                </tr>
+                <tr>
+                  <td><strong>Prominent Algorithms</strong></td>
+                  <td>Linear Regression, Random Forest</td>
+                  <td>K-Means Clustering, PCA</td>
+                </tr>
+                <tr>
+                  <td><strong>Computational Footprint</strong></td>
+                  <td>High training cost</td>
+                  <td>Moderate to variable</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout-box">
+            <div class="callout-title">
+              <span>⚠️ Critical Limitations & Constraints:</span>
+            </div>
+            <p style="margin-bottom: 0;">
+              Excessively deep neural networks remain susceptible to overfitting. Rigorous regularization regimens and hyperparameter optimization are strongly advised to preserve empirical validity.
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- 5. Subject-Specific Terminology Glossary Table (Acceptance Criteria #3) -->
+    <section class="glossary-summary-card">
+      <h3>
+        <span>📚 परियोजना पारिभाषिक शब्दावली (Subject-Specific Academic Glossary)</span>
+      </h3>
+      <p style="font-size: 0.9rem; color: var(--text-secondary);">
+        क्लाइंट की आवश्यकतानुसार सभी पृष्ठों पर एकरूपता (consistency) बनाए रखने के लिए वैज्ञानिक एवं तकनीकी शब्दावली आयोग (CSTT) द्वारा मान्य मानक हिंदी शब्दों का प्रयोग किया गया है:
+      </p>
+
+      <div class="glossary-grid">
+        <div class="glossary-item">
+          <span class="glossary-hi">मशीन अधिगम (मशीन लर्निंग)</span>
+          <span class="glossary-en">Machine Learning</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">कृत्रिम बुद्धिमत्ता</span>
+          <span class="glossary-en">Artificial Intelligence</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">पर्यवेक्षित अधिगम</span>
+          <span class="glossary-en">Supervised Learning</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">अपर्यवेक्षित अधिगम</span>
+          <span class="glossary-en">Unsupervised Learning</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">प्रशिक्षण डेटा</span>
+          <span class="glossary-en">Training Data</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">डेटासेट (डेटा समुच्चय)</span>
+          <span class="glossary-en">Dataset</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">अभिलक्षण / लक्षण</span>
+          <span class="glossary-en">Features</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">हानि फलन</span>
+          <span class="glossary-en">Loss Function</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">प्रवणता अवतरण</span>
+          <span class="glossary-en">Gradient Descent</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">अति-प्राचल</span>
+          <span class="glossary-en">Hyperparameters</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">अति-सन्निकटन</span>
+          <span class="glossary-en">Overfitting</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">सटीकता दर</span>
+          <span class="glossary-en">Accuracy Rate</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">कलन विधि (एल्गोरिदम)</span>
+          <span class="glossary-en">Algorithm</span>
+        </div>
+        <div class="glossary-item">
+          <span class="glossary-hi">तंत्रिका तंत्र</span>
+          <span class="glossary-en">Neural Networks</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Client Pitch & Acceptance Criteria Proof Card -->
+    <section class="client-pitch-footer">
+      <h2>श्रीमान् / महोदया — आपकी परियोजना के लिए पूर्णतः तैयार प्रस्ताव</h2>
+      <p>
+        यह नमूना पृष्ठ प्रत्यक्ष प्रमाण है कि आपकी शैक्षणिक वेब सामग्री को बिना किसी HTML टैग क्षति के, 100% व्याकरण-सम्मत, मानक एवं औपचारिक हिंदी में अनुवादित किया जा सकता है।
+      </p>
+
+      <div class="pitch-checklist">
+        <div class="checklist-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>१००% शुद्ध एवं मानक शैक्षणिक हिंदी</span>
+        </div>
+        <div class="checklist-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>HTML / Markdown टैग्स शत-प्रतिशत सुरक्षित</span>
+        </div>
+        <div class="checklist-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>शब्दावली एकरूपता (Uniform Glossary)</span>
+        </div>
+        <div class="checklist-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>सटीक फोल्डर संरचना में तत्काल अपलोड योग्य</span>
+        </div>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.08); padding: 1.25rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); font-size: 0.95rem;">
+        <strong>नोट:</strong> आप अपने प्रोजेक्ट के HTML या Markdown फाइलें मुझे प्रदान कर सकते हैं। मैं प्रत्येक पृष्ठ का ऐसा ही परिष्कृत हिंदी रूपांतरण आपकी दी गई समय-सीमा के भीतर उपलब्ध करा दूँगा।
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: var(--text-muted);">
+    © २०२६ शिक्षा सेतु • Formal Hindi Academic Translation Showcase | Built for Client Evaluation
+  </footer>
+
+  <!-- Interactive JavaScript Engine -->
+  <script src="scripts/portal.js"></script>
+</body>
+</html>
