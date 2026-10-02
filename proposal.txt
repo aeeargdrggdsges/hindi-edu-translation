@@ -1,0 +1,23 @@
+Subject: Formal English-Hindi Educational Web Translation (Live Sample Ready for Your Review)
+
+Hello,
+
+I understand you need a series of educational web pages translated into polished, formal Hindi (मानक एवं परिष्कृत हिंदी) specifically tailored for Indian students and educators, while strictly preserving every HTML tag, link structure, code block, and formatting element.
+
+To demonstrate my capability before you award the project, I have already developed an interactive live demonstration website showcasing the exact delivery standard you requested:
+
+Live Demonstration Link: https://hindi-edu-translation.vercel.app/
+
+Why this proposal directly satisfies all your acceptance criteria:
+
+1. Pure Academic & Formal Tone (मानक हिंदी): The content reads naturally and authoritatively for university-level students and instructors, strictly adhering to terminology standards set by the Commission for Scientific and Technical Terminology (CSTT). No awkward literal machine translation.
+2. 100% HTML & Markdown Tag Integrity: As you will see on the live demo, all headings (h1, h2), paragraphs, lists, tables, callout boxes, and code blocks remain completely intact without any syntax corruption.
+3. Uniform Terminology & Glossary Highlighting: I maintain strict consistency across all pages. The live sample includes an interactive "Glossary Highlight" toggle so you can quickly inspect and verify technical terms with instant English-to-Hindi tooltips.
+4. Local Search Optimization (SEO): Meta titles, meta descriptions, and keywords are accurately localized for Hindi academic search discovery.
+5. Clean Turnaround: I work directly with your supplied HTML or Markdown files and deliver them in the exact same folder structure, ready for instant server upload.
+
+I am ready to begin immediately and can deliver your pages with thorough self-proofreading well within your timeline. Looking forward to discussing the next steps with you.
+
+Best regards,
+Tejaans Bansal
+Freelance Web & Localization Specialist
